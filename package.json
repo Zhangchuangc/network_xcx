@@ -1,0 +1,23 @@
+{
+  "name": "network_xcx",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Zhangchuangc/network_xcx#readme",
+  "bugs": {
+    "url": "https://github.com/Zhangchuangc/network_xcx/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhangchuangc/network_xcx.git"
+  },
+  "dependencies": {
+    "@vant/weapp": "^1.11.7"
+  },
+  "license": "ISC",
+  "author": "zcc",
+  "type": "commonjs",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

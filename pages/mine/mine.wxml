@@ -1,0 +1,8 @@
+<!--pages/mine/mine.wxml-->
+
+<view class='my_top_view'>
+  <view wx:if="{{!apiUserInfoMap}}"></view>
+
+
+
+</view>

@@ -1,12 +1,15 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/home/home",
+    "pages/category/category",
+    "pages/coupons/coupons",
+    "pages/shopCart/shopCart",
+    "pages/mine/mine"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
-  "style": "v2",
   "renderer": "skyline",
   "rendererOptions": {
     "skyline": {
@@ -17,6 +20,45 @@
       "sdkVersionBegin": "3.0.0",
       "sdkVersionEnd": "15.255.255"
     }
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#6e6e6e",
+    "selectedColor": "blue",
+    "borderStyle": "white",
+
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tap/home-off.png",
+        "selectedIconPath": "images/tap/home-on.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "images/tap/fl-off.png",
+        "selectedIconPath": "images/tap/fl-on.png"
+      },
+      {
+        "pagePath": "pages/coupons/coupons",
+        "text": "优惠券",
+        "iconPath": "images/tap/coupon-off.png",
+        "selectedIconPath": "images/tap/coupon-on.png"
+      },
+      {
+        "pagePath": "pages/shopCart/shopCart",
+        "text": "购物车",
+        "iconPath": "images/tap/order-off.png",
+        "selectedIconPath": "images/tap/order-on.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tap/my-off.png",
+        "selectedIconPath": "images/tap/my-on.png"
+      }
+    ]
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
