@@ -1,5 +1,5 @@
 {
-  "libVersion": "3.13.2",
+  "libVersion": "3.12.1",
   "projectname": "network_xcx",
   "setting": {
     "urlCheck": true,
@@ -10,5 +10,22 @@
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null,
+          "launchMode": "default",
+          "partialCompile": {
+            "enabled": true,
+            "pages": []
+          }
+        }
+      ]
+    }
   }
 }

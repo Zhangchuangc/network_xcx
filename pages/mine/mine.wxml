@@ -1,7 +1,62 @@
 <!--pages/mine/mine.wxml-->
 
-<view class='my_top_view'>
-  <view wx:if="{{!apiUserInfoMap}}"></view>
+<view class="page-container">
+  <view class='my_top_view'>
+    <view wx:if="{{apiUserInfoMap}}" class="login-container">
+      <view class="login-tips">欢迎来到商城</view>
+      <view class="login-btn" bind:tap="login">
+        <text>立即登录</text>
+      </view>
+    </view>
+    <view wx:else class="user-info-container">
+      <view class="user-main">
+        <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+          <image class="avatar"
+            src="{{apiUserInfoMap.base.avatarUrl ? apiUserInfoMap.base.avatarUrl: '/images/default.png'}}"
+            mode="aspectFill"></image>
+          <view class="avatar-border"></view>
+        </button>
+        <view class="user-detail">
+          <view class="nickname-row">
+            <text class="nickname" bind:tap="editNick">{{
+          apiUserInfoMap.base.nick?apiUserInfoMap.base.nick:'点击设置昵称'}}</text>
+            <view wx:if="{{apiUserInfoMap.userLevel}}" class="user-level">
+              <text class="level-icon">👑</text>
+              <text class="level-text">{{apiUserInfoMap.userLevel.name}}</text>
+            </view>
+          </view>
+          <view class="user-id" bind:tap="copyUid">ID:{{apiUserInfoMap.base.id}}
+          </view>
+        </view>
+      </view>
+      <view class="qr-code-btn" bind:tap="gouserCode">
+        <view class="qr-icon-box">
+          <van-icon name="qr" size="52rpx" color="#E4393C" />
+        </view>
+        <view class="qr-text">会员码</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="asset-card">
+    <view class="asset-weapper">
+          <view class="asset-item asset-primary" bind:tap="goAsset">
+            <view class="asset-label">余额（元）</view>
+            <view class="asset-amount-row">
+              <text class="asset-symbol">￥</text>
+              <text class="asset-amount">{{balance}}</text>
+            </view>
+          </view>
+          <view class="asset-item asset-secondary" bind:tap="goAsset">
+            <view class="asset-label">冻结（元）</view>
+            <view class="asset-amount-row">
+              <text class="asset-symbol">￥</text>
+              <text class="asset-amount">{{balance}}</text>
+            </view>
+          </view>
+    </view>
+  </view>
 
 
 
