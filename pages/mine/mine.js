@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-     balance:0
+     balance:0,
+     cardsExpanded: false, // 会员卡展开状态
   },
 
   /**
