@@ -5,8 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-     balance:0,
-     cardsExpanded: false, // 会员卡展开状态
+    balance: 0,
+    cardsExpanded: false, // 会员卡展开状态
+    actives: [{ src: '优惠买单', text: 'bill' },
+    { src: '资金明细', text: 'records' },
+    { src: '申请发票', text: 'newspaper' },
+    { src: '开票记录', text: 'description' },
+    { src: '优惠券', text: 'graphic' },
+    { src: '签到拽积分', text: 'column' }],
+    distribution: {
+      title: '三级分销',
+      TowArray: ['成为分销商']
+    },
+    otterArray: {
+      title: '其他功能',
+      TowArray: ['个人消息', '帮助中心', '联系客服', '系统设置']
+    }
   },
 
   /**
@@ -63,5 +77,9 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  clickitem: function (e) {
+    console.log(e.target.dataset.index);
   }
 })

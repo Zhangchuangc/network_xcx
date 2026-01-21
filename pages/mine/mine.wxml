@@ -38,7 +38,7 @@
     </view>
   </view>
 
-
+  <!-- 数据区 -->
   <view class="asset-card">
     <view class="asset-weapper">
       <view class="asset-item asset-primary" bind:tap="goAsset">
@@ -68,7 +68,7 @@
       </view>
     </view>
   </view>
-
+  <!-- 会员卡 -->
   <view wx:if="{{ !myCards }}" class="card-section">
     <view class="section-title">
       <text class="title-text">我的会员卡</text>
@@ -124,7 +124,7 @@
       <view class="order-item" bindtap='goOrder' data-type="1">
         <view class="order-icon-wrapper">
           <text class="order-icon">📦</text>
-          <view wx:if="{{count_id_no_transfer}}" class="order-badge">{{count_id_no_transfer}}</view>
+          <view wx:if="{{!count_id_no_transfer}}" class="order-badge">{{1}}</view>
         </view>
         <view class="order-label">待发货</view>
       </view>
@@ -150,5 +150,50 @@
       </view>
     </view>
   </view>
+  <!-- cps订单 -->
+  <navigator url="/packagecps/pages/order-list/cps" class="menu-card">
+    <view class="menu-item">
+      <text class="menu-label">cps订单</text>
+      <text class="menu-value">管理 ›</text>
+    </view>
+  </navigator>
+  <!-- 回收订单 -->
+  <navigator url="/pages/recycle/orders" class="menu-card">
+    <view class="menu-item">
+      <text class="menu-label">回收订单</text>
+      <text class="menu-value">管理 ›</text>
+    </view>
+  </navigator>
 
+  <view class="avtive-view">
+    <view class="avtive-top">
+      <text class='avtive-top-title'>常用功能</text>
+    </view>
+    <van-grid column-num="4" border="{{ false }}">
+      <van-grid-item wx:for="{{actives}}" wx:key="index" icon="{{item.text}}" text="{{item.src}}"
+        bindtap="onGridItemTap" data-index="{{index}}" />
+    </van-grid>
+  </view>
+
+  <view class="distribution-section">
+    <view class="avtive-top">
+      <text class="avtive-top-title">{{distribution.title}}</text>
+    </view>
+    <view wx:for="{{distribution.TowArray}}" wx:key="index" class="section-list">
+      <text class="menu-label">{{item}}</text>
+      <text class="menu-value">›</text>
+    </view>
+    <view class="line"></view>
+  </view>
+
+  <view class="distribution-section">
+    <view class="avtive-top">
+      <text class="avtive-top-title">{{otterArray.title}}</text>
+    </view>
+    <view wx:for="{{otterArray.TowArray}}" wx:key="index" class="section-list" bind:tap="clickitem" data-index="{{item}}">
+      <text class="menu-label">{{item}}</text>
+      <text class="menu-value">›</text>
+    </view>
+
+  </view>
 </view>
