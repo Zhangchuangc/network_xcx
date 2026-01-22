@@ -9,21 +9,24 @@
     "preloadBackgroundData": false,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
-    "compileHotReLoad": true
+    "compileHotReLoad": true,
+    "useApiHook": true,
+    "useStaticServer": false,
+    "useLanDebug": false,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "ignoreDevUnusedFiles": true,
+    "bigPackageSizeSupport": false
   },
   "condition": {
     "miniprogram": {
       "list": [
         {
-          "name": "pages/mine/mine",
-          "pathName": "pages/mine/mine",
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
           "query": "",
           "scene": null,
-          "launchMode": "default",
-          "partialCompile": {
-            "enabled": true,
-            "pages": []
-          }
+          "launchMode": "default"
         }
       ]
     }

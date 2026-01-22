@@ -2,7 +2,7 @@
 
 <view class="page-container">
   <view class='my_top_view'>
-    <view wx:if="{{apiUserInfoMap}}" class="login-container">
+    <view wx:if="{{!apiUserInfoMap}}" class="login-container">
       <view class="login-tips">欢迎来到商城</view>
       <view class="login-btn" bind:tap="login">
         <text>立即登录</text>

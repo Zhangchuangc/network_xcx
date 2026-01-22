@@ -81,5 +81,13 @@ Page({
 
   clickitem: function (e) {
     console.log(e.target.dataset.index);
-  }
+  },
+
+// 点击跳转登陆
+login:function(){
+wx.navigateTo({
+  url: '/pages/login/login',
+})
+}
+
 })

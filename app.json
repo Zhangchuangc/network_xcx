@@ -4,7 +4,9 @@
     "pages/category/category",
     "pages/coupons/coupons",
     "pages/shopCart/shopCart",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/login/login",
+    "typings/wx.d.ts"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,7 +20,6 @@
     "color": "#6e6e6e",
     "selectedColor": "blue",
     "borderStyle": "white",
-
     "list": [
       {
         "pagePath": "pages/home/home",
