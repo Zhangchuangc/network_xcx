@@ -5,8 +5,7 @@
     "pages/coupons/coupons",
     "pages/shopCart/shopCart",
     "pages/mine/mine",
-    "pages/login/login",
-    "typings/wx.d.ts"
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -54,6 +53,8 @@
     ]
   },
   "usingComponents": {
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
     "van-notice-bar": "@vant/weapp/notice-bar/index",
     "van-search": "@vant/weapp/search/index",
     "van-divider": "@vant/weapp/divider/index",

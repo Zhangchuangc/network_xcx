@@ -11,7 +11,8 @@
     "url": "git+https://github.com/Zhangchuangc/network_xcx.git"
   },
   "dependencies": {
-    "@vant/weapp": "^1.11.7"
+    "@vant/weapp": "^1.11.7",
+    "tdesign-miniprogram": "^1.12.2"
   },
   "license": "ISC",
   "author": "zcc",

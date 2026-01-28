@@ -1,2 +1,69 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" bindtap='goSearch'> </van-search>
+
+<navigator wx:if="{{shopInfo}}" url='/pages/shop/select'>
+  <view class="jd-shop-selector">
+    <view class="jd-shop-info">
+      <image src="" mode=""></image>
+      <text class="jd-shop-name">{{shopInfo.name}}</text>
+    </view>
+    <view class="jd-shop-change">
+      <text>切换</text>
+      <image src="" mode=""></image>
+    </view>
+  </view>
+</navigator>
+
+<view class="jd-banner-container">
+  <swiper class="jd-banner-swiper" indicator-dots="true" indicator-color="rgba(255,255,255,0.5)"
+    indicator-active-color="#e4393c" autoplay="true" circular="true">
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <view class="jd-banner-item">
+        <image src="{{item.picUrl}}" mode="aspectFill" bind:tap="tapBanner"></image>
+      </view>
+
+    </swiper-item>
+  </swiper>
+  <view wx:if="{{goodsDynamic && show_buy_dynamic == '1'}}" class="jd-buy-dynamic">
+    <swiper class="jd-dynamic-swiper" autoplay="true" circular="ture" vertical="true">
+      <navigator wx:for="{{goodDynamic}}" wx:key="index" url="{{goodsDeatailPage.url(item)}}">
+        <swiper-item>
+          <view class="jd-dynamic-item">
+            <image src="{{item.avatarUrl}}" mode="aspectFill"></image>
+            <text>{{item.nick}} 购买了 {{item.goodsName}}</text>
+          </view>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+</view>
+
+<view class="jd-category-container">
+  <view class="jd-category-grid">
+    <view class="jd-category-item" wx:for="{{categories}}" wx:key="id" bind:tap="tabClick" data-id="{{item.id}}">
+      <view class="jd-category-icon-wrap">
+        <image src="{{item.icon}}" mode="aspectFill"></image>
+      </view>
+      <text class="jd-category-name">{{item.name}}</text>
+    </view>
+    <view class="jd-category-item" wx:for="{{cmsCategories}}" wx:key="id" bind:tap="tabClickCms" data-idx="{{index}}">
+      <view class="jd-category-icon-wrap">
+        <image src="{{item.icon}}" mode="aspectFill"></image>
+      </view>
+      <text class="jd-category-name">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+<view class="jd-notice-container" wx:if="{{noticeList}}">
+  <swiper class="jd-notice-swiper" vertical="true" autoplay="ture" circular="true" interval="8000">
+    <swiper-item wx:for="{{noticeList.dataList}}" wx:key="id">
+      <van-notice-bar wx:if="{{noticeList}}" model="line" text="{{item.title}}" background="#f5f5f5"
+        data-id="{{item.id}}" speed='30' bind:click="goNotice" color='#e4393c'>
+        <image src="" mode=""></image>
+      </van-notice-bar>
+
+    </swiper-item>
+
+  </swiper>
+</view>
