@@ -25,6 +25,17 @@ export interface TdChatActionbarProps {
     };
     placement?: {
         type: StringConstructor;
-        value?: 'start' | 'end' | 'space-around' | 'space-between';
+        value?: 'start' | 'end' | 'space-around' | 'space-between' | 'longpress';
+    };
+    longPressPosition?: {
+        type: ObjectConstructor;
+        value?: {
+            pageX: number;
+            pageY: number;
+            clientX: number;
+            clientY: number;
+            x: number;
+            y: number;
+        };
     };
 }

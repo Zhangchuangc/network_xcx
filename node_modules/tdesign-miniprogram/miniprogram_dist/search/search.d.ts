@@ -23,5 +23,5 @@ export default class Search extends SuperComponent {
     handleClear(): void;
     onConfirm(e: any): void;
     onActionClick(): void;
-    onSelectResultItem(e: any): void;
+    onSelectOption(e: any): void;
 }

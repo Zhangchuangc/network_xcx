@@ -97,11 +97,12 @@
         <view class="jd-seckill-img-wrap">
           <image src="{{item.pic}}" mode="aspectFill" lazy-load="true"></image>
         </view>
+
         <view class="jd-seckill-info">
           <view class="jd-seckill-title">{{item.name}}</view>
           <view class="jd-seckill-countdown">
-            <van-count-down wx:if="{{item.dateStartInt>0}}" time="{{item.dateStartInt}}" format="{{item.dateStartInt > 86400000? '局开始DD天HH:mm:ss':'距离开始 HH:mm:ss'}}">
-            </van-count-down wx:if="{{item.dateStartInt <=0 && item.dateEndInt >0 }}" time="{{item.dateEndInt}}" format="{{itme.dateEndInt}}> 86400000? '局开始DD天HH:mm:ss':'距离开始 HH:mm:ss'">
+            <van-count-down wx:if="{{item.dateStartInt>0}}" time="{{item.dateStartInt}}" format="{{item.dateStartInt > 86400000? '局开始DD天HH:mm:ss':'距离开始 HH:mm:ss'}}" />
+            <van-count-down wx:if="{{item.dateStartInt <=0 && item.dateEndInt >0 }}" time="{{item.dateEndInt}}" format="{{itme.dateEndInt > 86400000? '局开始DD天HH:mm:ss':'距离开始 HH:mm:ss'}}" />
           </view>
           <view class="jd-seckill-footer">
             <view class="jd-seckill-price">

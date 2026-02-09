@@ -12,21 +12,31 @@ export default class ChatActionbar extends SuperComponent {
             replay: string;
             copy: string;
             share: string;
+            quote: string;
         };
         iconActiveMap: {
             good: string;
             bad: string;
         };
+        widthStyle: string;
+        popoverStyle: string;
+        popoverPosition: string;
+        longpressVisible: boolean;
     };
     observers: {
         comment(newVal: any): void;
-        'actionBar, pComment'(): void;
+        'actionBar, pComment, placement'(): void;
+        longPressPosition(newVal: any): void;
     };
     methods: {
         filterSpecialChars(content: string): string;
         handleActionClick(e: any): void;
         handleCopy(): void;
         setActions(): void;
+        setPComment(newVal: any): void;
+        showPopover(pos: any): void;
+        hidePopover(): void;
+        onVisibleChange(e: any): void;
     };
     lifetimes: {
         created(): void;

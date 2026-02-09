@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@vant/weapp": "^1.11.7",
-    "tdesign-miniprogram": "^1.12.2"
+    "apifm-wxapi": "^26.2.5",
+    "tdesign-miniprogram": "^1.12.3"
   },
   "license": "ISC",
   "author": "zcc",
